@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-size: 62.5%;
+        width: 100vw;
+        min-height: 100dvh;
+        font-family: sans-serif;
+        display: grid;
+        place-content: center;
+        color: white;
+        background: #e252ff;
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        gap: 1em;
+        margin-top: 1em;
+      }
+      .container a {
+        display: inline-block;
+        padding: 1em 2.4em;
+        text-decoration: none;
+        color: white;
+        letter-spacing: 1px;
+        font-size: 1.6em;
+        font-weight: 550;
+        background: #b500da;
+        border-radius: 5px;
+        transition: 500ms linear;
+      }
+      .container a:active {
+        scale: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Accordian</h1>
+    <div class="container">
+      <a href="./p1/index.html" target="_blank">Type 1</a>
+      <a href="./p2/index.html" target="_blank">Type 2</a>
+      <a href="./p3/index.html" target="_blank">Type 3</a>
+    </div>
+  </body>
+</html>

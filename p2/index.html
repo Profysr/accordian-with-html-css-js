@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faq Section</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--Container of Faq Section-->
+    <section class="container">
+      <h2 class="faq-title">Frequently Asked questions</h2>
+
+      <div class="faq">
+        <div class="question">
+          <p class="number">01</p>
+          <h3>What is Javascript?</h3>
+          <i>+</i>
+        </div>
+        <div class="answer">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+            voluptatem inventore voluptatum quisquam laborum! Repellendus, velit
+            perspiciatis nihil doloribus earum tempore nam perferendis, cum
+            reiciendis enim accusantium ipsum, ullam temporibus?
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <div class="number">02</div>
+          <h3>Its easy to learn HTML and CSS?</h3>
+          <i>+</i>
+        </div>
+        <div class="answer">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+            voluptatem inventore voluptatum quisquam laborum! Repellendus, velit
+            perspiciatis nihil doloribus earum tempore nam perferendis, cum
+            reiciendis enim accusantium ipsum, ullam temporibus?
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="question">
+          <p class="number">03</p>
+          <h3>What's new after Javascript?</h3>
+          <i>+</i>
+        </div>
+        <div class="answer">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+            voluptatem inventore voluptatum quisquam laborum! Repellendus, velit
+            perspiciatis nihil doloribus earum tempore nam perferendis, cum
+            reiciendis enim accusantium ipsum, ullam temporibus?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let faqs = document.querySelectorAll(".faq");
+      faqs.forEach((faq, index) => {
+        faq.addEventListener("click", () => {
+          faq.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

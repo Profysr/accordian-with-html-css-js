@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background: #090820;
+}
+.faq_container {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  margin: 1rem;
+}
+.faq {
+  width: 100%;
+  background: #1c1555;
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  cursor: pointer;
+  /* yh transition to 300ms mein complete hogi pr pehle yh symbol k rotate hone ka wait kre gi  */
+  transition: 500ms linear 350ms;
+}
+.faq_heading {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin-bottom: 3.2rem;
+  position: relative;
+}
+.faq_heading::before {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  border: 2px solid white;
+  width: 50%;
+}
+.faq_heading::after {
+  content: "";
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: white;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading {
+  font-size: 1.8rem;
+}
+.symbol {
+  font-size: 2.4rem;
+  transition: 300ms linear;
+}
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: 500ms linear; /* jb ak se dosre box pr ja click karu ga to yh animation execute hogi */
+}
+.answer p {
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  font-weight: 500;
+}
+
+/* Active Classes */
+.faq.active {
+  background: white;
+  color: black;
+}
+.faq.active .heading {
+  font-weight: 600;
+}
+.faq.active .answer {
+  max-height: 100vh;
+  transition: 750ms linear 1s; /* jese hi ak box pr click karu ga to yh animation execute hogi */
+  /* animation: fade 500ms ease-in-out 2s; */
+}
+.faq.active .symbol {
+  rotate: 225deg;
+}
+
+/* @keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+/* 
+case 1:
+    symbol rotate hoga
+    then background ka color change hoga
+    answer display hoga
+
+case 2:
+    previous answer wala box hide ho ga --- symbol rotate hoga
+    then background ka color change hoga
+    answer display hoga
+*/

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="faq_container">
+      <h2 class="faq_heading">Frequently Asked Questions</h2>
+      <div class="faq active" data-index="1">
+        <div class="question">
+          <p class="heading">What is Javascript?</p>
+          <p class="symbol">+</p>
+        </div>
+        <div class="answer">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            aliquid nemo iusto in, reiciendis deleniti molestiae repellendus
+            totam alias quam dolores! Saepe aspernatur quae sequi quas
+            laboriosam facilis vero quaerat?
+          </p>
+        </div>
+      </div>
+
+      <div class="faq" data-index="2">
+        <div class="question">
+          <p class="heading">What is Javascript?</p>
+          <p class="symbol">+</p>
+        </div>
+        <div class="answer">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            aliquid nemo iusto in, reiciendis deleniti molestiae repellendus
+            totam alias quam dolores! Saepe aspernatur quae sequi quas
+            laboriosam facilis vero quaerat?
+          </p>
+        </div>
+      </div>
+
+      <div class="faq" data-index="3">
+        <div class="question">
+          <p class="heading">What is Javascript?</p>
+          <p class="symbol">+</p>
+        </div>
+        <div class="answer">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            aliquid nemo iusto in, reiciendis deleniti molestiae repellendus
+            totam alias quam dolores! Saepe aspernatur quae sequi quas
+            laboriosam facilis vero quaerat?
+          </p>
+        </div>
+      </div>
+
+      <div class="faq" data-index="4">
+        <div class="question">
+          <p class="heading">What is Javascript?</p>
+          <p class="symbol">+</p>
+        </div>
+        <div class="answer">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            aliquid nemo iusto in, reiciendis deleniti molestiae repellendus
+            totam alias quam dolores! Saepe aspernatur quae sequi quas
+            laboriosam facilis vero quaerat?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let faqs = document.querySelectorAll(".faq");
+      let symbols = document.querySelectorAll(".symbol");
+      faqs.forEach((faq, index) => {
+        faq.addEventListener("click", () => {
+          // First remove the active class from every item
+          faqs.forEach((item, i) => {
+            item.classList.remove("active");
+          });
+          faq.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

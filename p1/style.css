@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: rgb(252, 254, 255);
+  font-family: sans-serif;
+}
+.accordian {
+  width: 80%;
+  max-width: 70rem;
+  margin: 10rem auto;
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  position: relative;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.4rem;
+  cursor: pointer;
+  color: #555;
+}
+.number {
+  font-size: 2.4rem;
+}
+.question {
+  font-size: 1.8rem;
+}
+.icon {
+  font-size: 3rem;
+  color: rgb(36, 137, 253);
+  transition: 500ms;
+}
+.hiddenBox {
+  grid-column: 2/3;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 750ms linear;
+}
+.hiddenBox :is(p, ul li) {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  word-spacing: 3px;
+}
+.hiddenBox ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.6rem;
+}
+
+/* Active Classes */
+.item.active::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 3px solid rgb(36, 137, 253);
+  width: 0%;
+  animation-name: timeRun;
+  animation-duration: 750ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+.item.active .icon {
+  rotate: 225deg;
+}
+.item.active .hiddenBox {
+  max-height: 100vh;
+  animation-name: fade;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+}
+@keyframes timeRun {
+  to {
+    width: 100%;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
